@@ -1,0 +1,316 @@
+/* global styles */
+input,
+select {
+  background-color: #222222;
+}
+
+/* Main container */
+.item-selector-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.463);
+  border-radius: 10px;
+  text-align: center;
+  background-color: #333333;
+}
+
+/* Heading styles */
+.item-selector-heading {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.selected-items-info {
+  font-size: 16px;
+  color: #c8c8c8;
+  margin-bottom: 20px;
+}
+
+/* Selected items styles */
+.selected-items-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.selected-item {
+  display: flex;
+  align-items: center;
+  background-color: rgb(74, 0, 74);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid rgb(64, 1, 64);
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.remove-item-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.remove-item-btn:hover {
+  color: #ff6b6b;
+  transform: scale(1.3);
+}
+
+/* Button styles */
+.change-btn {
+  background-color: #6ab04c;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.change-btn:hover {
+  background-color: #5a9d3f;
+}
+
+.save-btn {
+  background-color: #6ab04c;
+  color: white;
+  border: none;
+  padding: 12px 40px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.save-btn:hover {
+  background-color: #5a9d3f;
+}
+
+.cancel-btn {
+  background-color: #b33a3a;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 10px;
+}
+
+.cancel-btn:hover {
+  background-color: #973232;
+}
+
+/* Dialog styles */
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.dialog-container {
+  border: 1px solid rgba(114, 114, 114, 0.463);
+
+  background-color: #333;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 8px;
+  padding: 20px;
+  color: white;
+  position: relative;
+}
+
+.dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.dialog-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.close-dialog-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+.close-dialog-btn:hover {
+  color: #ff6b6b;
+  transform: scale(1.4);
+}
+
+.dialog-controls {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.dialog-controls-label {
+  font-size: 16px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+
+  min-width: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.dialog-search {
+  flex: 1;
+  gap: 2;
+}
+
+.dialog-filter {
+  flex: 1;
+}
+
+/* Search input */
+.search-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  color: #cc0d0d;
+  font-weight: 800;
+  border: 1px solid #555;
+  border-radius: 4px;
+}
+
+/* Filter dropdown */
+.filter-select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 800;
+  color: #f7f7f7;
+  border: 1px solid #555;
+  border-radius: 4px;
+}
+.filter-select:focus {
+  border: 1px solid #555;
+}
+/* Items list */
+.items-list {
+  height: 300px;
+  background-color: #222;
+  overflow-y: auto;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  scrollbar-width: thin;
+  scrollbar-color: #555 #222;
+  border: 1px solid #626262;
+  padding: 10 15px;
+  border-radius: 10px;
+}
+
+.items-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.items-list::-webkit-scrollbar-track {
+  background: #222;
+}
+
+.items-list::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+.item-row {
+  background-color: #333333;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 1px solid #333;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  transition: all ease 0.3s;
+}
+
+.item-row:hover {
+  background-color: #474646;
+  transform: scale(1.01);
+}
+
+.item-checkbox {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  pointer-events: none;
+  background-color: #222222;
+  accent-color: purple;
+  transition: all ease 0.5s;
+}
+
+.item-checkbox:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.item-label {
+  cursor: pointer;
+}
+
+/* Dialog footer */
+.dialog-footer {
+  border-top: 1px solid #444;
+  padding-top: 20px;
+}
+
+.dialog-footer-title {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.dialog-footer-actions {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .dialog-controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .dialog-footer-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .save-btn,
+  .cancel-btn {
+    width: 100%;
+    margin-left: 0;
+  }
+}
