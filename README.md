@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Item Selection Widget
 
-## Getting Started
+A React/Next.js component for selecting items with search and filter functionality.
 
-First, run the development server:
+## Quick Start
 
 ```bash
+# Clone the repository
+git clone https://github.com/yourusername/item-selection-widget.git
+
+# Install dependencies
+cd item-selection-widget
+npm install
+
+# Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tools & Technologies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- React with TypeScript
+- Redux for state management
+- Next.js with App Router
+- CSS
+- lucide-react for icons
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Folder Structure
 
-## Learn More
+```
+/app                         # Next.js App Router
+  /page.tsx                  # Item selector page
+/src
+  /components
+    ItemSelector.tsx        # Main component
+    SelectedItemsList.tsx   # Shows selected items
+    SelectionDialog.tsx     # Dialog modal
+    ItemsList.tsx           # List of items
+    SearchBar.tsx           # Search component
+    FilterDropdown.tsx      # Filter component
+  /redux
+    store.ts                  # Redux store
+    itemsSlice.ts             # Redux slice
+    ReduxProvider.tsx         # Provider wrapper
+  /types
+    types.ts                  # TS types
+  /hooks
+    useItemSelection.ts       # Selection logic
+  /data
+    mockData.ts               # Mock data
+  /styles
+    ItemSelector.css        # Styles
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Important Notes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Add `'use client';` directive to components using Redux
+- Lazy load the ItemSelector component in Next.js pages

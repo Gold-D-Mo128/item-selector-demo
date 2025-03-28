@@ -18,7 +18,7 @@ select {
 /* Heading styles */
 .item-selector-heading {
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 800;
   margin-bottom: 20px;
   color: #ffffff;
 }
@@ -70,14 +70,15 @@ select {
 
 /* Button styles */
 .change-btn {
-  background-color: #6ab04c;
+  background-color: #518c38;
   color: white;
   border: none;
   padding: 12px 20px;
   font-size: 16px;
-  border-radius: 4px;
+  border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s;
+  font-weight: 800;
 }
 
 .change-btn:hover {
@@ -85,12 +86,13 @@ select {
 }
 
 .save-btn {
-  background-color: #6ab04c;
+  background-color: #518c38;
+  font-weight: 800;
   color: white;
   border: none;
   padding: 12px 40px;
   font-size: 16px;
-  border-radius: 4px;
+  border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -105,10 +107,11 @@ select {
   border: none;
   padding: 12px 20px;
   font-size: 16px;
-  border-radius: 4px;
+  border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s;
   margin-left: 10px;
+  font-weight: 800;
 }
 
 .cancel-btn:hover {
@@ -197,7 +200,7 @@ select {
   width: 100%;
   padding: 10px;
   font-size: 14px;
-  color: #cc0d0d;
+  color: white;
   font-weight: 800;
   border: 1px solid #555;
   border-radius: 4px;
