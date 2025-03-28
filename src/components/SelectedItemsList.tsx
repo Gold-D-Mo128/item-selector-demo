@@ -11,7 +11,6 @@ interface SelectedItemsListProps {
 const SelectedItemsList: React.FC<SelectedItemsListProps> = ({
   items,
   onRemoveItem,
-  isDialog = false,
 }) => {
   return (
     <div className="selected-items-wrapper">
