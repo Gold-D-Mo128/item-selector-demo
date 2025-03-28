@@ -31,16 +31,15 @@ npm run dev
   /page.tsx                  # Item selector page
 /src
   /components
+    FilterDropdown.tsx      # Filter component
     ItemSelector.tsx        # Main component
-    SelectedItemsList.tsx   # Shows selected items
-    SelectionDialog.tsx     # Dialog modal
     ItemsList.tsx           # List of items
     SearchBar.tsx           # Search component
-    FilterDropdown.tsx      # Filter component
+    SelectedItemsList.tsx   # Shows selected items
+    SelectionDialog.tsx     # Dialog modal
   /redux
     store.ts                  # Redux store
     itemsSlice.ts             # Redux slice
-    ReduxProvider.tsx         # Provider wrapper
   /types
     types.ts                  # TS types
   /hooks
@@ -50,8 +49,3 @@ npm run dev
   /styles
     ItemSelector.css        # Styles
 ```
-
-## Important Notes
-
-- Add `'use client';` directive to components using Redux
-- Lazy load the ItemSelector component in Next.js pages
