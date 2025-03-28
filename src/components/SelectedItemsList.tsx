@@ -1,6 +1,6 @@
+import { X } from "lucide-react";
 import React from "react";
 import { Item } from "../types/types";
-import { Check, X } from "lucide-react";
 
 interface SelectedItemsListProps {
   items: Item[];
